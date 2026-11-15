@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Starlight Drift — a gravity-slingshot arcade game</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: #04060f;
+      overflow: hidden;
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
+    #stage {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    canvas {
+      /* Logical size is 1280x800; scale to fit the window, keep aspect. */
+      width: min(100vw, 160vh);
+      height: min(62.5vw, 100vh);
+      display: block;
+      background: #070b1d;
+      cursor: crosshair;
+    }
+  </style>
+</head>
+<body>
+  <div id="stage">
+    <canvas id="game" width="1280" height="800" aria-label="Starlight Drift game canvas"></canvas>
+  </div>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
